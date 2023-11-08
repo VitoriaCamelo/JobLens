@@ -1,0 +1,22 @@
+########### AQUI ESTAO CODIGOS DESCONTINUADOS ###########
+
+# ----------- MAIN.PY
+# Variável para controlar a visibilidade dos elementos
+mostrar_cargos = False
+# Adicione uma barra lateral para o filtro de área
+with st.sidebar:
+    st.header("Filtrar por Área:")
+    selected_area = st.selectbox("Escolha uma área:", list(cargos_por_area.keys()))
+# Mostrar os cargos na área selecionada quando o usuário selecionar uma área
+if selected_area:
+    mostrar_cargos = True
+# Verifica se a variável mostrar_cargos é verdadeira antes de mostrar os cargos
+if mostrar_cargos:
+    st.header(f"Cargos na área de {selected_area.capitalize()}:")
+    if selected_area in cargos_por_area:
+        for vaga in cargos_por_area[selected_area]:
+            if st.button(vaga):
+                st.write(f"Requisitos para {vaga}:")
+                requisito = requisitos_vagas.get(vaga, "Requisitos não encontrados.")
+                st.write(requisito)
+
