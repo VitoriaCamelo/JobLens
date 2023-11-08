@@ -1,0 +1,9 @@
+#
+João Silva
+joao.silva@example.com
+Desenvolvedor Full Stack
+5 anos
+Python, JavaScript, React, Node.js
+Desenvolvedor apaixonado por tecnologia e inovação
+
+#
